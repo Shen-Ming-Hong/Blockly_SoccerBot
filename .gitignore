@@ -1,0 +1,18 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# VS Code
+.vscode/
+
+# Generated source code
+bot/src/
+remote_controller/src/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak

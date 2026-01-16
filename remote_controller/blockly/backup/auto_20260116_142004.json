@@ -1,0 +1,62 @@
+{
+  "workspace": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "micropython_main",
+          "id": "90S4|_vKxxu2{gyrlNql",
+          "x": 478,
+          "y": 143,
+          "deletable": false,
+          "inputs": {
+            "MAIN": {
+              "block": {
+                "type": "rc_master_init",
+                "id": "]D]#ie!#|,yN,|-xGV1w",
+                "fields": {
+                  "PAIR_ID": 1,
+                  "CHANNEL": 1
+                },
+                "next": {
+                  "block": {
+                    "type": "controls_whileUntil",
+                    "id": "%bFDt|k(CKG0J1lQzIac",
+                    "fields": {
+                      "MODE": "WHILE"
+                    },
+                    "inputs": {
+                      "BOOL": {
+                        "block": {
+                          "type": "logic_boolean",
+                          "id": "~KF+.~MJ+Gxw@fC}iNY!",
+                          "fields": {
+                            "BOOL": "TRUE"
+                          }
+                        }
+                      },
+                      "DO": {
+                        "block": {
+                          "type": "rc_send",
+                          "id": "=hPX{x)!lX0GX#xO(4$["
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "variables": [
+      {
+        "name": "i",
+        "id": "Ddrn{Ew]yDYG}+Uto7+e"
+      }
+    ]
+  },
+  "board": "cyberbrick",
+  "theme": "light"
+}
