@@ -13,6 +13,12 @@ This project contains two separate programs for building a remote-controlled soc
 | `bot/`               | Soccer robot program      | Receiver (Slave)     |
 | `remote_controller/` | Remote controller program | Transmitter (Master) |
 
+### Program Screenshots
+
+|                                Transmitter (Remote Controller)                                |                          Receiver (Robot)                           |
+| :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| <img src="images/remote_controller_program.jpg" width="100%" alt="Remote Controller Program"> | <img src="images/bot_program.jpg" width="100%" alt="Robot Program"> |
+
 ## 🔧 Hardware
 
 For complete hardware information including:

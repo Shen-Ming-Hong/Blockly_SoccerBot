@@ -93,7 +93,7 @@
                                       "block": {
                                         "type": "arduino_function_call",
                                         "id": "H^TVmi6[Djn38HPU_A]a",
-                                        "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"主程式\" has_return=\"false\" return_type=\"void\"></mutation>"
+                                        "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"mainloop\" has_return=\"false\" return_type=\"void\"></mutation>"
                                       }
                                     }
                                   }
@@ -188,11 +188,11 @@
         {
           "type": "arduino_function",
           "id": "jBj:0bB3P;WyYVtiORWZ",
-          "x": 0,
-          "y": 574,
+          "x": 742,
+          "y": -14,
           "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\"></mutation>",
           "fields": {
-            "NAME": "主程式"
+            "NAME": "mainloop"
           },
           "inputs": {
             "STACK": {
