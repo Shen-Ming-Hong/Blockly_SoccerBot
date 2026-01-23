@@ -151,6 +151,8 @@ Blockly 編輯器會自動：
 
 > 👉 詳細說明請參考：[CyberBrick Wiki](https://wiki.bambulab.com/zh/cyberbrick)
 
+> 💡 **提示：** 如果您已經完成過首次設定，可以跳過此章節，直接前往[上傳步驟](#上傳步驟)。
+
 ### 上傳步驟
 
 1. 使用 **USB-C 傳輸線**將 CyberBrick 連接到電腦

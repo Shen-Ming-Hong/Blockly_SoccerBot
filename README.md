@@ -151,6 +151,8 @@ You need **two CyberBrick boards** - one for the robot and one for the remote co
 
 > 👉 For detailed instructions, visit: [CyberBrick Wiki](https://wiki.bambulab.com/en/cyberbrick)
 
+> 💡 **Tip:** If you have already completed the first-time setup, you can skip this section and proceed directly to [Upload Steps](#upload-steps).
+
 ### Upload Steps
 
 1. Connect CyberBrick to your computer via **USB-C cable**
