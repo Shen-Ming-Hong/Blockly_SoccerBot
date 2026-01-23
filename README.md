@@ -23,9 +23,9 @@ This project contains two separate programs for building a remote-controlled soc
 
 For complete hardware information including:
 
--   Bill of Materials (BOM)
--   Assembly instructions
--   Wiring diagrams
+- Bill of Materials (BOM)
+- Assembly instructions
+- Wiring diagrams
 
 👉 Visit the official MakerWorld page: **[CyberBrick Official SoccerBot](https://makerworld.com/zh/models/1395987-cyberbrick-official-soccerbot#profileId-1446987)**
 
@@ -50,10 +50,10 @@ After installing Singular Blockly, you will be prompted to install **PlatformIO 
 
 > ⚠️ **IMPORTANT:**
 >
-> -   **Ensure stable internet connection** - PlatformIO needs to download necessary tools
-> -   **Do NOT interrupt the installation** - Wait patiently for PlatformIO to complete initialization
-> -   This may take several minutes on first install
-> -   If VS Code prompts you to restart, you can wait until all extensions are installed, then restart once
+> - **Ensure stable internet connection** - PlatformIO needs to download necessary tools
+> - **Do NOT interrupt the installation** - Wait patiently for PlatformIO to complete initialization
+> - This may take several minutes on first install
+> - If VS Code prompts you to restart, you can wait until all extensions are installed, then restart once
 
 <p align="center">
   <img src="images/extensions_installed.jpg" width="600" alt="Extensions Installed">
@@ -95,8 +95,8 @@ Click the **Singular Blockly icon** in the **Activity Bar** (left sidebar) to op
 
 The Blockly editor will automatically:
 
--   Load the program from `blockly/main.json`
--   Select the correct target board (CyberBrick)
+- Load the program from `blockly/main.json`
+- Select the correct target board (CyberBrick)
 
 <p align="center">
   <img src="images/blockly_editor.jpg" width="700" alt="Blockly Editor">
@@ -109,6 +109,47 @@ You can now view and modify the block program!
 ## 📤 Uploading Programs
 
 You need **two CyberBrick boards** - one for the robot and one for the remote controller.
+
+### First-Time Setup for New CyberBrick Boards
+
+> ⚠️ **IMPORTANT:** If you just received a new CyberBrick board, you must complete the following updates before using it:
+>
+> 1. **Upgrade Firmware Version** - Update to the latest firmware for optimal performance and compatibility
+> 2. **Update Project Version** - Ensure the project files are synchronized with the current firmware
+
+**Step 1:** Open CyberBrick Desktop
+
+<p align="center">
+  <img src="images/first_setup_step1.jpg" width="600" alt="Step 1: Open CyberBrick Desktop">
+</p>
+
+**Step 2:** Create a new empty project
+
+<p align="center">
+  <img src="images/first_setup_step2.jpg" width="600" alt="Step 2: Create New Project">
+</p>
+
+**Step 3-5:** Connect to the CyberBrick core board (click "+ Add Receiver" if setting up receiver)
+
+<p align="center">
+  <img src="images/first_setup_step3.jpg" width="600" alt="Step 3: Connect to Board">
+</p>
+
+<p align="center">
+  <img src="images/first_setup_step4.jpg" width="600" alt="Step 4: Connecting">
+</p>
+
+<p align="center">
+  <img src="images/first_setup_step5.jpg" width="600" alt="Step 5: Connection Complete">
+</p>
+
+**Step 6:** Wait for firmware and project version update to complete
+
+<p align="center">
+  <img src="images/first_setup_step6.jpg" width="600" alt="Step 6: Update Complete">
+</p>
+
+> 👉 For detailed instructions, visit: [CyberBrick Wiki](https://wiki.bambulab.com/en/cyberbrick)
 
 ### Upload Steps
 
@@ -153,19 +194,19 @@ You need **two CyberBrick boards** - one for the robot and one for the remote co
 
 ### Connection Tips
 
--   **Recommended power-on order:** Turn on the receiver (robot) first, then the transmitter (remote controller) for a more stable connection
--   The **receiver (robot)** may take longer to establish connection
--   If the robot shows red LED for too long, press the **Reset button** on the robot's CyberBrick board
--   If the connection is unstable (LED keeps flashing cyan ↔ red), press the **Reset button** on the **remote controller** to resend the connection signal
--   Connection timeout is set to **30 seconds**
+- **Recommended power-on order:** Turn on the receiver (robot) first, then the transmitter (remote controller) for a more stable connection
+- The **receiver (robot)** may take longer to establish connection
+- If the robot shows red LED for too long, press the **Reset button** on the robot's CyberBrick board
+- If the connection is unstable (LED keeps flashing cyan ↔ red), press the **Reset button** on the **remote controller** to resend the connection signal
+- Connection timeout is set to **30 seconds**
 
 ---
 
 ## 🔗 Resources
 
--   [Singular Blockly Extension](https://github.com/Shen-Ming-Hong/singular-blockly)
--   [CyberBrick Official SoccerBot (MakerWorld)](https://makerworld.com/zh/models/1395987-cyberbrick-official-soccerbot#profileId-1446987)
--   [CyberBrick Wiki](https://wiki.bambulab.com/en/cyberbrick)
+- [Singular Blockly Extension](https://github.com/Shen-Ming-Hong/singular-blockly)
+- [CyberBrick Official SoccerBot (MakerWorld)](https://makerworld.com/zh/models/1395987-cyberbrick-official-soccerbot#profileId-1446987)
+- [CyberBrick Wiki](https://wiki.bambulab.com/en/cyberbrick)
 
 ---
 

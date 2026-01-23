@@ -23,9 +23,9 @@
 
 完整硬體資訊包含：
 
--   材料清單 (BOM)
--   組裝說明
--   接線圖
+- 材料清單 (BOM)
+- 組裝說明
+- 接線圖
 
 👉 請前往官方 MakerWorld 頁面：**[CyberBrick Official SoccerBot](https://makerworld.com/zh/models/1395987-cyberbrick-official-soccerbot#profileId-1446987)**
 
@@ -50,10 +50,10 @@
 
 > ⚠️ **重要提醒：**
 >
-> -   **確保網路連線穩定** - PlatformIO 需要下載必要工具
-> -   **請勿中斷安裝過程** - 請耐心等待 PlatformIO 完成初始化
-> -   首次安裝可能需要數分鐘
-> -   如果遇到 VS Code 重新啟動提示，可以等所有擴充套件都安裝完成後，再一次重新啟動即可
+> - **確保網路連線穩定** - PlatformIO 需要下載必要工具
+> - **請勿中斷安裝過程** - 請耐心等待 PlatformIO 完成初始化
+> - 首次安裝可能需要數分鐘
+> - 如果遇到 VS Code 重新啟動提示，可以等所有擴充套件都安裝完成後，再一次重新啟動即可
 
 <p align="center">
   <img src="images/extensions_installed.jpg" width="600" alt="Extensions Installed">
@@ -95,8 +95,8 @@
 
 Blockly 編輯器會自動：
 
--   載入 `blockly/main.json` 中的程式
--   選擇正確的目標板 (CyberBrick)
+- 載入 `blockly/main.json` 中的程式
+- 選擇正確的目標板 (CyberBrick)
 
 <p align="center">
   <img src="images/blockly_editor.jpg" width="700" alt="Blockly Editor">
@@ -109,6 +109,47 @@ Blockly 編輯器會自動：
 ## 📤 上傳程式
 
 您需要**兩塊 CyberBrick 開發板** - 一塊用於機器人，一塊用於遙控器。
+
+### 新開發板首次使用設定
+
+> ⚠️ **重要提醒：** 如果您剛拿到新的 CyberBrick 開發板，必須先完成以下更新才能使用：
+>
+> 1. **升級固件版本** - 更新至最新固件以獲得最佳性能和相容性
+> 2. **更新專案版本** - 確保專案檔案與當前固件同步
+
+**步驟 1：** 開啟 CyberBrick Desktop
+
+<p align="center">
+  <img src="images/first_setup_step1.jpg" width="600" alt="步驟 1：開啟 CyberBrick Desktop">
+</p>
+
+**步驟 2：** 建立新的空白專案
+
+<p align="center">
+  <img src="images/first_setup_step2.jpg" width="600" alt="步驟 2：建立新專案">
+</p>
+
+**步驟 3-5：** 與 CyberBrick 核心板連線（如果要設定接收端，請點擊「+ Add Receiver」）
+
+<p align="center">
+  <img src="images/first_setup_step3.jpg" width="600" alt="步驟 3：連接開發板">
+</p>
+
+<p align="center">
+  <img src="images/first_setup_step4.jpg" width="600" alt="步驟 4：連線中">
+</p>
+
+<p align="center">
+  <img src="images/first_setup_step5.jpg" width="600" alt="步驟 5：連線完成">
+</p>
+
+**步驟 6：** 等待固件與專案版本更新完成
+
+<p align="center">
+  <img src="images/first_setup_step6.jpg" width="600" alt="步驟 6：更新完成">
+</p>
+
+> 👉 詳細說明請參考：[CyberBrick Wiki](https://wiki.bambulab.com/zh/cyberbrick)
 
 ### 上傳步驟
 
@@ -153,19 +194,19 @@ Blockly 編輯器會自動：
 
 ### 連線提示
 
--   **建議開機順序：** 先開啟接收端（機器人），再開啟發送端（遙控器），連線會更穩定
--   **接收端（機器人）** 可能需要較長時間建立連線
--   如果機器人長時間顯示紅色 LED，請按下機器人 CyberBrick 板上的 **Reset 按鈕**
--   如果連線不穩定（LED 一直閃爍青色 ↔ 紅色），請按下**遙控器**的 **Reset 按鈕**來重新發送連線訊號
--   連線逾時設定為 **30 秒**
+- **建議開機順序：** 先開啟接收端（機器人），再開啟發送端（遙控器），連線會更穩定
+- **接收端（機器人）** 可能需要較長時間建立連線
+- 如果機器人長時間顯示紅色 LED，請按下機器人 CyberBrick 板上的 **Reset 按鈕**
+- 如果連線不穩定（LED 一直閃爍青色 ↔ 紅色），請按下**遙控器**的 **Reset 按鈕**來重新發送連線訊號
+- 連線逾時設定為 **30 秒**
 
 ---
 
 ## 🔗 相關資源
 
--   [Singular Blockly 擴充套件](https://github.com/Shen-Ming-Hong/singular-blockly)
--   [CyberBrick 官方足球機器人 (MakerWorld)](https://makerworld.com/zh/models/1395987-cyberbrick-official-soccerbot#profileId-1446987)
--   [CyberBrick Wiki](https://wiki.bambulab.com/en/cyberbrick)
+- [Singular Blockly 擴充套件](https://github.com/Shen-Ming-Hong/singular-blockly)
+- [CyberBrick 官方足球機器人 (MakerWorld)](https://makerworld.com/zh/models/1395987-cyberbrick-official-soccerbot#profileId-1446987)
+- [CyberBrick Wiki](https://wiki.bambulab.com/en/cyberbrick)
 
 ---
 
