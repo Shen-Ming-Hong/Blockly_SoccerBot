@@ -543,7 +543,7 @@
                                         "type": "math_number",
                                         "id": "Bh-ze+fl@;u)YihbQKkT",
                                         "fields": {
-                                          "NUM": -100
+                                          "NUM": 100
                                         }
                                       }
                                     },
@@ -552,7 +552,7 @@
                                         "type": "math_number",
                                         "id": "7Ht1yS%Z+:M-;%2inC{%",
                                         "fields": {
-                                          "NUM": 100
+                                          "NUM": -100
                                         }
                                       }
                                     }
