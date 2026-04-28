@@ -12,93 +12,103 @@
           "inputs": {
             "MAIN": {
               "block": {
-                "type": "rc_slave_init",
-                "id": "-Q`BO~Ztzw|7W:iY5*[|",
+                "type": "rc_master_init",
+                "id": "R1yW@6@J=]F.c1tK)j|S",
                 "fields": {
-                  "PAIR_ID": 1,
                   "CHANNEL": 1
+                },
+                "inputs": {
+                  "PAIR_ID": {
+                    "shadow": {
+                      "type": "math_number",
+                      "id": "$zWNQ9lm*MFR2LGW/I;6",
+                      "fields": {
+                        "NUM": 1
+                      }
+                    }
+                  }
                 },
                 "next": {
                   "block": {
-                    "type": "rc_wait_connection",
-                    "id": "4j,QyxRf*rdutNn?ST%c",
+                    "type": "controls_whileUntil",
+                    "id": "k=[i+3~x*SddKyW_;qs3",
                     "fields": {
-                      "TIMEOUT": 30
+                      "MODE": "WHILE"
                     },
-                    "next": {
-                      "block": {
-                        "type": "controls_whileUntil",
-                        "id": "k=[i+3~x*SddKyW_;qs3",
-                        "fields": {
-                          "MODE": "WHILE"
-                        },
-                        "inputs": {
-                          "BOOL": {
-                            "block": {
-                              "type": "logic_boolean",
-                              "id": "7.swAcx}_G|^N^cjj7At",
-                              "fields": {
-                                "BOOL": "TRUE"
-                              }
-                            }
+                    "inputs": {
+                      "BOOL": {
+                        "block": {
+                          "type": "logic_boolean",
+                          "id": "7.swAcx}_G|^N^cjj7At",
+                          "fields": {
+                            "BOOL": "TRUE"
+                          }
+                        }
+                      },
+                      "DO": {
+                        "block": {
+                          "type": "controls_if",
+                          "id": "RcNlj-cSA_R)`9Cg)xb`",
+                          "extraState": {
+                            "hasElse": true
                           },
-                          "DO": {
-                            "block": {
-                              "type": "controls_if",
-                              "id": "RcNlj-cSA_R)`9Cg)xb`",
-                              "extraState": {
-                                "hasElse": true
-                              },
-                              "inputs": {
-                                "IF0": {
-                                  "block": {
-                                    "type": "rc_is_connected",
-                                    "id": "Q%4PB!en#jK9ektltx$W"
-                                  }
-                                },
-                                "DO0": {
-                                  "block": {
-                                    "type": "cyberbrick_led_set_color",
-                                    "id": "ywzz~)J^{WURV[@}IdpG",
-                                    "inputs": {
-                                      "RED": {
-                                        "shadow": {
-                                          "type": "math_number",
-                                          "id": "-n?dHG3fWKT+YndPSK^[",
-                                          "fields": {
-                                            "NUM": 0
-                                          }
-                                        }
-                                      },
-                                      "GREEN": {
-                                        "shadow": {
-                                          "type": "math_number",
-                                          "id": ".1|`!GSoy_9{N7HocH-.",
-                                          "fields": {
-                                            "NUM": 100
-                                          }
-                                        }
-                                      },
-                                      "BLUE": {
-                                        "shadow": {
-                                          "type": "math_number",
-                                          "id": "d]x*T+LhyllsF!z~dICY",
-                                          "fields": {
-                                            "NUM": 100
-                                          }
-                                        }
+                          "inputs": {
+                            "IF0": {
+                              "block": {
+                                "type": "rc_is_connected",
+                                "id": "Q%4PB!en#jK9ektltx$W"
+                              }
+                            },
+                            "DO0": {
+                              "block": {
+                                "type": "cyberbrick_led_set_color",
+                                "id": "ywzz~)J^{WURV[@}IdpG",
+                                "inputs": {
+                                  "RED": {
+                                    "shadow": {
+                                      "type": "math_number",
+                                      "id": "-n?dHG3fWKT+YndPSK^[",
+                                      "fields": {
+                                        "NUM": 0
                                       }
-                                    },
-                                    "next": {
-                                      "block": {
-                                        "type": "arduino_function_call",
-                                        "id": "H^TVmi6[Djn38HPU_A]a",
-                                        "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"mainloop\" has_return=\"false\" return_type=\"void\"></mutation>"
+                                    }
+                                  },
+                                  "GREEN": {
+                                    "shadow": {
+                                      "type": "math_number",
+                                      "id": ".1|`!GSoy_9{N7HocH-.",
+                                      "fields": {
+                                        "NUM": 100
+                                      }
+                                    }
+                                  },
+                                  "BLUE": {
+                                    "shadow": {
+                                      "type": "math_number",
+                                      "id": "d]x*T+LhyllsF!z~dICY",
+                                      "fields": {
+                                        "NUM": 100
                                       }
                                     }
                                   }
                                 },
-                                "ELSE": {
+                                "next": {
+                                  "block": {
+                                    "type": "arduino_function_call",
+                                    "id": "H^TVmi6[Djn38HPU_A]a",
+                                    "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"mainloop\" has_return=\"false\" return_type=\"void\"></mutation>"
+                                  }
+                                }
+                              }
+                            },
+                            "ELSE": {
+                              "block": {
+                                "type": "rc_wait_connection",
+                                "id": "y([m3n%!S_$q~{3eX+3X",
+                                "fields": {
+                                  "TIMEOUT": 1
+                                },
+                                "next": {
                                   "block": {
                                     "type": "cyberbrick_led_set_color",
                                     "id": "ZxAo={8R:29/)2eOq|Q%",
@@ -216,6 +226,13 @@
                       "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                       "inputs": {
                         "ARG0": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "ks{A$N1;]89QkWd%;Sk:",
+                            "fields": {
+                              "NUM": 0
+                            }
+                          },
                           "block": {
                             "type": "math_number",
                             "id": "|bM0!s=mt%jM`e$J5jo2",
@@ -225,6 +242,13 @@
                           }
                         },
                         "ARG1": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "i310WbkrcW-zCBSU%c`U",
+                            "fields": {
+                              "NUM": 0
+                            }
+                          },
                           "block": {
                             "type": "math_number",
                             "id": "_tO|0m$az[X7x`PJ9_M_",
@@ -234,6 +258,13 @@
                           }
                         },
                         "ARG2": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "LR53:Zb](aw2Jrh^duJL",
+                            "fields": {
+                              "NUM": 0
+                            }
+                          },
                           "block": {
                             "type": "math_number",
                             "id": "{I*T$QzRqr=.Ju9QbgwH",
@@ -265,6 +296,13 @@
                               "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                               "inputs": {
                                 "ARG0": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "(N]+S9nrJ$ww$G1ZB3*j",
+                                    "fields": {
+                                      "NUM": 0
+                                    }
+                                  },
                                   "block": {
                                     "type": "math_number",
                                     "id": "565aso-|b/K?D^$eZ%o#",
@@ -274,6 +312,13 @@
                                   }
                                 },
                                 "ARG1": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "vz9q:t2h/S_]!bI.$pY:",
+                                    "fields": {
+                                      "NUM": 0
+                                    }
+                                  },
                                   "block": {
                                     "type": "math_number",
                                     "id": "C-Wn-6Yti7}7M|7@50G?",
@@ -283,6 +328,13 @@
                                   }
                                 },
                                 "ARG2": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "ABE)5Db(?ghzjA5~vU$c",
+                                    "fields": {
+                                      "NUM": 0
+                                    }
+                                  },
                                   "block": {
                                     "type": "math_number",
                                     "id": "RQ(V^fYSoYS`u3sKzUk=",
@@ -314,6 +366,13 @@
                                       "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                                       "inputs": {
                                         "ARG0": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "qiqIF1U0oE;`ooMM#}D/",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "_xx^sNw47Ov@c15F|N1W",
@@ -323,6 +382,13 @@
                                           }
                                         },
                                         "ARG1": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "Qo)ufxsG~6qt3GG*G]pd",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "9T8@Z7k[]G`*hptyk33#",
@@ -332,6 +398,13 @@
                                           }
                                         },
                                         "ARG2": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "TQyK@k]Kqhhx]{8^^%cm",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "F=RuY:K|i(!qL}9Hw?6l",
@@ -363,6 +436,13 @@
                                               "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                                               "inputs": {
                                                 "ARG0": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "m(Vhn+ZbkKcNGjvFR2S$",
+                                                    "fields": {
+                                                      "NUM": 0
+                                                    }
+                                                  },
                                                   "block": {
                                                     "type": "math_number",
                                                     "id": "hrWG-`|eFf+M@[TKNi*@",
@@ -372,6 +452,13 @@
                                                   }
                                                 },
                                                 "ARG1": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "o3,P0MAdP.yVg/-o[B{e",
+                                                    "fields": {
+                                                      "NUM": 0
+                                                    }
+                                                  },
                                                   "block": {
                                                     "type": "math_number",
                                                     "id": ":N:[yoOKN,UvBSSIB%8{",
@@ -381,6 +468,13 @@
                                                   }
                                                 },
                                                 "ARG2": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "5FetAS/~64+x~?-^oA_I",
+                                                    "fields": {
+                                                      "NUM": 0
+                                                    }
+                                                  },
                                                   "block": {
                                                     "type": "math_number",
                                                     "id": "rdalQ097aJC=?XAo[1p[",
@@ -732,6 +826,13 @@
                                       "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                                       "inputs": {
                                         "ARG0": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "$.V:[l[IaMPn]=*Qz5J*",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "K/`M7t0_$nwY~hrL;Iah",
@@ -741,6 +842,13 @@
                                           }
                                         },
                                         "ARG1": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "7MMoj;J{R0NX^KDi4D2i",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "gQ1b?m]6/qi?`n+UKG;O",
@@ -750,6 +858,13 @@
                                           }
                                         },
                                         "ARG2": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "r}A1KXN#./D2iu.Gh,V4",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "1rRWX(c$YMI,zJ7b0!J/",
@@ -808,6 +923,13 @@
                                       "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                                       "inputs": {
                                         "ARG0": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "pY5B7JQ0-r5ga=^||7LE",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "2)3W,:.vF=$0p.MU+f=Z",
@@ -817,6 +939,13 @@
                                           }
                                         },
                                         "ARG1": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "7D#vj6$Q_-o_Y(!),y`0",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "N+sWN5qPT-/ZhvNREIX7",
@@ -826,6 +955,13 @@
                                           }
                                         },
                                         "ARG2": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "0|PUoMw`ZW;{|ZIsf}tD",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          },
                                           "block": {
                                             "type": "math_number",
                                             "id": "{FHY-1k|BUvWxryAG~xH",
@@ -1121,6 +1257,13 @@
                                               "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                                               "inputs": {
                                                 "ARG0": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "@j535vZ=II1,;L2)`CuY",
+                                                    "fields": {
+                                                      "NUM": 0
+                                                    }
+                                                  },
                                                   "block": {
                                                     "type": "math_number",
                                                     "id": "lxBRM0zP#kr7t9.7rps;",
@@ -1130,6 +1273,13 @@
                                                   }
                                                 },
                                                 "ARG1": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "tT5wqol|k1/mu}uzpc}D",
+                                                    "fields": {
+                                                      "NUM": 0
+                                                    }
+                                                  },
                                                   "block": {
                                                     "type": "math_number",
                                                     "id": "7ZpEUb9A494iPKht]5^X",
@@ -1139,6 +1289,13 @@
                                                   }
                                                 },
                                                 "ARG2": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "wynJ]AUaj^trT;fM(tpC",
+                                                    "fields": {
+                                                      "NUM": 0
+                                                    }
+                                                  },
                                                   "block": {
                                                     "type": "math_number",
                                                     "id": "6I64{QL$Ry88PJ^J{~N7",
@@ -1170,6 +1327,13 @@
                                                       "extraState": "<mutation xmlns=\"http://www.w3.org/1999/xhtml\" version=\"1\" name=\"LED\" has_return=\"false\" return_type=\"void\"><arg name=\"R\" type=\"int\"></arg><arg name=\"G\" type=\"int\"></arg><arg name=\"B\" type=\"int\"></arg></mutation>",
                                                       "inputs": {
                                                         "ARG0": {
+                                                          "shadow": {
+                                                            "type": "math_number",
+                                                            "id": "UaMC[+3D_(T4yiIsYsxi",
+                                                            "fields": {
+                                                              "NUM": 0
+                                                            }
+                                                          },
                                                           "block": {
                                                             "type": "math_number",
                                                             "id": "`KUF/5umZs(?!.55L7xY",
@@ -1179,6 +1343,13 @@
                                                           }
                                                         },
                                                         "ARG1": {
+                                                          "shadow": {
+                                                            "type": "math_number",
+                                                            "id": "ipnc9Yr84)+?$(CR9@7*",
+                                                            "fields": {
+                                                              "NUM": 0
+                                                            }
+                                                          },
                                                           "block": {
                                                             "type": "math_number",
                                                             "id": "fQ})1D7I*:)?]zSgb5eD",
@@ -1188,6 +1359,13 @@
                                                           }
                                                         },
                                                         "ARG2": {
+                                                          "shadow": {
+                                                            "type": "math_number",
+                                                            "id": "TpV*t{1LRbtha3@=PqsP",
+                                                            "fields": {
+                                                              "NUM": 0
+                                                            }
+                                                          },
                                                           "block": {
                                                             "type": "math_number",
                                                             "id": "jOPr|5q,u,WdvEp5,2hY",
